@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <title>Web App</title>
- </head>
- <style>
-  input[type=text]{
-    width:50%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin-top:40px;
-    margin-left:48px;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-  }
-  input[type=text]:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 8px 0 dodgerBlue;
-  }
-  .enter{
-   width:50%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin-left:48px;
-    margin-top:8px;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-    background-color:#6497b1;
-  }
-  .content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-h3{
-color:#03396c
-}
- </style>
- <body>
- <div class="content">
-    <form method="POST" action="/response">
-    <input type="text" name="c_name" required placeholder="enter city"><br>
-   <input type="submit" value="Submit" class="enter">
-  </form>
-  {% if name %}
-  <h3>{{name}}</h3>
-  {% endif %}
- </div>
- </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Web App</title>
+  </head>
+  <style>
+    input[type=text] {
+      width: 50%;
+      border: 2px solid #aaa;
+      border-radius: 4px;
+      margin-top: 40px;
+      margin-left: 48px;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: .3s;
+    }
+
+    input[type=text]:focus {
+      border-color: dodgerBlue;
+      box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+
+    .enter {
+      width: 50%;
+      border: 2px solid #aaa;
+      border-radius: 4px;
+      margin-left: 48px;
+      margin-top: 8px;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: .3s;
+      background-color: #6497b1;
+    }
+
+    .content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    h3 {
+      color: #03396c
+    }
+  </style>
+  <body>
+    <div class="content">
+      <form method="POST" action="/response">
+        <input type="text" name="c_name" required placeholder="enter city">
+        <br>
+        <input type="submit" value="Submit" class="enter">
+      </form> {% if name %} <h3>{{name}}</h3> {% endif %}
+    </div>
+  </body>
 </html>
